@@ -1,0 +1,87 @@
+:root{
+    --amarillo: #eac926;
+    --azul: #03264c;
+    --celeste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    max-width: 150px;
+}
+.ultimos-Titulares{
+    font-size: 24px;
+}
+
+.precios{
+    font-size: 18px;
+}
+
+.descunto-o-descripcion{
+    font-size: 16px;
+}
+.mini-header{
+    margin: 0 40px;
+}
+
+.bar-menu{
+    background-color: var(--amarillo);
+    padding: 20px 0;
+}
+
+.section-main{
+    text-align: center;
+}
+
+.product img{
+    width: 100%;
+}
+
+.navbar ul, .search-section {
+    margin-bottom: 15px;
+}
+
+.payment-method{
+    text-align: center;
+}
+
+.burger-menu{
+    text-align: center;
+}
+.burger-menu button{
+    padding: 8px;
+    color: white;
+    background-color: var(--celeste);
+    border: none;
+    border-radius: 5px;
+    
+}
+
+footer{
+    padding: 20px;
+    color: var(--gris-oscuro);
+}
+
+.section-footer{
+    margin: 25px;
+    text-align: center;
+}
+
+.section-footer i{
+    color: var(--celeste);
+    font-size: 32px;
+    margin-bottom: 10px;
+
+}
+
+.footer-brand p{
+    font-size: 10px;
+}
