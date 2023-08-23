@@ -9,13 +9,14 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    margin: 0;
-    padding: 0;
+    
 }
 
 .ultimos-Titulares{
@@ -29,9 +30,9 @@ body{
 .descunto-o-descripcion{
     font-size: 16px;
 }
-/*.mini-header{
-    margin: 0 40px;
-}*/
+.mini-header{
+   align-items: center;
+}
 
 main{
     width: 90%;
@@ -49,10 +50,8 @@ main{
 }
 
 .payment-method{
-    text-align: center;
     font-size: 18px;
-    max-width: 350px;
-    text-align: right;
+    text-align: center;
 }
 
 /*menu-button*/
@@ -84,16 +83,26 @@ main{
     font-size: 17px;
 }
 
-
+/*Productos*/
+main{
+    margin: auto;
+}
+main h2{
+    margin: 20px auto;
+}
 .section-product{
     background-color: var(--gris-claro);
 }
 .section-main{
+    display: flex;
     text-align: center;
+    flex-wrap: wrap;
 }
+
 .product{
     margin: 10px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    max-width: 200px;
 }
 
 .detail-product{
@@ -108,10 +117,6 @@ main{
 /*.navbar ul, .search-section {
     margin-bottom: 15px;
 }*/
-
-
-
-
 
 footer{
     padding: 20px;
@@ -151,7 +156,7 @@ footer{
         display: none;
     }
     .navbar{
-        border: dotted 2px red;
+        /*border: dotted 2px red;*/
         display: flex;
         justify-content: space-between;
     }
@@ -162,6 +167,36 @@ footer{
     .navbar li{
         margin: 0 5px;
     }
+    .payment-method{
+        text-align: center;
+        max-width: 350px;
+        text-align: right;
+    }
+    .product{
+        max-width: 420px;
+    }
     
     
+}
+
+@media (min-width:1200px){
+    .mini-header, .navbar{
+        max-width: 1200px;
+        margin: auto;
+        padding-bottom: 15px;
+        
+    }
+    .payment-method{
+        max-width: none;
+        font-size: 19px;
+    }
+    .logo{
+        width: 250px;
+    }
+    .navbar a{
+        font-size: 18px;
+    }
+    .product{
+        max-width: 520px;
+    }
 }
