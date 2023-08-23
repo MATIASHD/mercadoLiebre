@@ -9,14 +9,15 @@
 
 *{
     box-sizing: border-box;
+}
+
+body{
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     margin: 0;
     padding: 0;
 }
-.logo{
-    max-width: 150px;
-}
+
 .ultimos-Titulares{
     font-size: 24px;
 }
@@ -28,16 +29,62 @@
 .descunto-o-descripcion{
     font-size: 16px;
 }
-.mini-header{
+/*.mini-header{
     margin: 0 40px;
-}
+}*/
+
 main{
     width: 90%;
 }
+
+/*Navbar*/
 .bar-menu{
     background-color: var(--amarillo);
-    padding: 20px 0;
+    padding: 20px;
 }
+
+/*Logo*/
+.logo{
+    width: 150px;
+}
+
+.payment-method{
+    text-align: center;
+    font-size: 18px;
+    max-width: 350px;
+    text-align: right;
+}
+
+/*menu-button*/
+.burger-menu{
+    text-align: center;
+}
+.burger-menu button{
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 18px;
+    background-color: var(--celeste);
+    border: none;
+    border-radius: 8px;
+}
+
+/*menu*/
+.navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: var(--gris-oscuro);
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+
+
 .section-product{
     background-color: var(--gris-claro);
 }
@@ -58,13 +105,11 @@ main{
     width: 100%;
 }
 
-.navbar ul, .search-section {
+/*.navbar ul, .search-section {
     margin-bottom: 15px;
-}
+}*/
 
-.payment-method{
-    text-align: center;
-}
+
 
 
 
@@ -90,27 +135,33 @@ footer{
 }
 
 @media (min-width: 361px) {
-.burger-menu{
-    text-align: center;
-}
-.burger-menu button{
-    padding: 8px;
-    color: white;
-    background-color: var(--celeste);
-    border: none;
-    border-radius: 5px;
-}
+
 .navbar{
     display: none;
 }
     
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
+    .mini-header{
+        display: flex;
+        justify-content: space-between;
+    }
     .burger-menu{
         display: none;
     }
     .navbar{
-        display:block;
+        border: dotted 2px red;
+        display: flex;
+        justify-content: space-between;
     }
+
+    .navbar ul{
+        display: flex;
+    }
+    .navbar li{
+        margin: 0 5px;
+    }
+    
+    
 }
