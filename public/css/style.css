@@ -13,6 +13,7 @@
     padding: 0;
 }
 
+
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
@@ -108,6 +109,11 @@ main h2{
 .detail-product{
     border: 1px solid var(--gris-claro);
     padding: 15px;
+    text-align: left;
+}
+
+.detail-product span{
+    display: inline-block;
 }
 
 .product img{
@@ -145,6 +151,18 @@ footer{
     display: none;
 }
     
+}
+.sale{
+    border: solid 2px red;
+    width: 30%;
+    font-size: 26px;
+    font-weight: 700;
+}
+.discount{
+    border: solid 2px red;
+    width: 70%;
+    font-size: 22px;
+    color: var(--verde);
 }
 
 @media (min-width: 768px) {
