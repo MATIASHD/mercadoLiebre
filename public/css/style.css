@@ -214,6 +214,26 @@ footer{
     top: -20px;
 
 }
+/*form*/
+main form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 350px;
+}
+.check{
+    display: inline-block
+}
+main form label{
+    font-size: 21px;
+    color: var(--gris-oscuro);
+    margin: 15px 0;
+}
+main form input{
+    background-color: var(--gris-oscuro);
+    height: 23px;
+    width: 100%;
+}
 @media (min-width: 768px) {
 
     .logo{
