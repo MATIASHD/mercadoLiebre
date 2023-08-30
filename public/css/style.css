@@ -5,6 +5,7 @@
     --gris-oscuro: #666;
     --gris-claro: #ebebeb;
     --verde: #39b54a;
+    --negro-mate: #333;
 }
 
 *{
@@ -17,7 +18,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    
+    color: var(--negro-mate);
 }
 
 .ultimos-Titulares{
@@ -214,26 +215,65 @@ footer{
     top: -20px;
 
 }
-/*form*/
+
+.form-titule{
+    text-align: center;
+    font-size: 48px;
+}
 main form{
     display: flex;
     flex-direction: column;
+    max-width: 450px;
     margin: auto;
-    max-width: 350px;
-}
-.check{
-    display: inline-block
 }
 main form label{
-    font-size: 21px;
-    color: var(--gris-oscuro);
-    margin: 15px 0;
+    font-size: 16px;
+    color: var(--negro-mate);
+    margin-top: 15px;
+    font-weight: 700;
+
 }
-main form input{
-    background-color: var(--gris-oscuro);
-    height: 23px;
-    width: 100%;
+.input-style{
+    height: 32px;
+    margin: 5px 0;
+    border: solid 1px var(--gris-oscuro);
+    border-radius: 5px;
 }
+.upload-style{
+    margin: 5px 0;
+}
+.btn-submit, .btn-reset{
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.btn-submit{
+    background-color: var(--amarillo);
+    color: white;
+    margin: 15px 0 8px 0;
+}
+input.btn-submit:hover{
+    background-color: white;
+    color: var(--amarillo);
+    border: 1px solid var(--gris-claro);
+    
+}
+.btn-reset{
+    background-color: var(--celeste);
+    color: white;
+}
+input.btn-reset:hover{
+    background-color: white;
+    color: var(--celeste);
+    border: 1px solid var(--gris-claro);
+}
+.radio-option{
+    margin: 8px 0 0 0;
+}
+
 @media (min-width: 768px) {
 
     .logo{
@@ -266,8 +306,28 @@ main form input{
     .product{
         max-width: 47%;
     }
-    
-    
+    /*Register*/
+    .form-titule{
+        font-size: 56px;
+    }
+    main form{
+        max-width: 520px;
+    }
+    .btn-submit, .btn-reset{
+        height: 42px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    .input-style{
+        height: 42px;
+        margin: 8px 0;
+        border-radius: 8px;
+    }
+    .upload-style{
+        margin: 5px 0;
+    }
 }
 
 @media (min-width:1200px){
@@ -278,7 +338,6 @@ main form input{
         max-width: 1200px;
         margin: auto;
         padding-bottom: 15px;
-        
     }
     .payment-method{
         font-size: 19px;
@@ -294,5 +353,8 @@ main form input{
     }
     .sale{
         font-size: 2;
+    }
+    main form{
+        max-width: 620px;
     }
 }
