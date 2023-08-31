@@ -48,8 +48,12 @@ main{
 .bar-menu{
     background-color: var(--amarillo);
     padding: 20px;
+    position: fixed;
+    width: 100%;
 }
-
+.main-container-register, .main-container-signin{
+    padding-top: 132px;
+}
 /*Logo*/
 .logo{
     width: 50%;
@@ -138,6 +142,7 @@ main h2{
 }
 .section-product{
     background-color: white;
+    padding-top: 144px;
 }
 .section-main{
     display: flex;
@@ -160,6 +165,15 @@ main h2{
 }
 .product-name{
     margin: 5px 0;
+    display: none;
+}
+.detail-product:hover .product-name{
+    display: block;
+}
+.product:hover{
+    -webkit-box-shadow: 13px 22px 18px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 13px 22px 18px 0px rgba(0,0,0,0.75);
+box-shadow: 13px 22px 18px 0px rgba(0,0,0,0.75);
 }
 .product img{
     width: 100%;
@@ -184,7 +198,7 @@ footer{
     color: var(--gris-oscuro);
 }
 .section-footer{
-    margin: 35Spx;
+    margin: 35px;
     text-align: center;
 }
 .section-footer i{
@@ -195,6 +209,7 @@ footer{
 .footer-brand p{
     font-size: 10px;
 }
+
 /*Delivery icon*/
 .detail-product{
     position: relative;
@@ -213,7 +228,10 @@ footer{
     position: absolute;
     right: 20px;
     top: -20px;
+}
 
+.product-delivery-icon:hover{
+    transform: rotate(-90deg) ;
 }
 
 .form-titule{
@@ -327,6 +345,9 @@ input.btn-reset:hover{
     }
     .upload-style{
         margin: 5px 0;
+    }
+    footer{
+        display: flex;
     }
 }
 
