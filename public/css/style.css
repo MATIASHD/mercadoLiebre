@@ -14,24 +14,31 @@
     padding: 0;
 }
 
+/*
+Cuerpos de texto: 12px
+Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px
+*/
 
-body{
+
+html{
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     color: var(--negro-mate);
+    
 }
-
 .ultimos-Titulares{
     font-size: 24px;
 }
-
 .precios{
     font-size: 18px;
 }
-
 .descunto-o-descripcion{
     font-size: 16px;
 }
+
 .mini-header{
    align-items: center;
    display: flex;
@@ -39,7 +46,10 @@ body{
    flex-wrap: wrap;
    width: 100%;
 }
-
+.page-body{
+    background-color: var(--gris-claro);
+    padding: 50px 0;
+}
 main{
     width: 90%;
 }
@@ -48,12 +58,9 @@ main{
 .bar-menu{
     background-color: var(--amarillo);
     padding: 20px;
-    position: fixed;
     width: 100%;
 }
-.main-container-register, .main-container-signin{
-    padding-top: 132px;
-}
+
 /*Logo*/
 .logo{
     width: 50%;
@@ -137,12 +144,11 @@ main{
     margin: auto;
 }
 main h2{
-    margin: 32px;
+    padding: 32px;
     text-align: center;
 }
 .section-product{
     background-color: white;
-    padding-top: 144px;
 }
 .section-main{
     display: flex;
@@ -152,13 +158,13 @@ main h2{
 }
 .product{
     width: 100%;
-    margin: 10px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    margin: 5px;
 }
 .detail-product{
-    border: 1px solid var(--gris-claro);
+    border-top: 1px solid var(--gris-claro);
     padding: 15px;
     text-align: left;
+    background-color: white;
 }
 .detail-product span{
     display: inline-block;
@@ -167,9 +173,9 @@ main h2{
     margin: 5px 0;
     display: none;
 }
-.detail-product:hover .product-name{
+/*.detail-product:hover .product-name{
     display: block;
-}
+}*/
 .product:hover{
     -webkit-box-shadow: 13px 22px 18px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 13px 22px 18px 0px rgba(0,0,0,0.75);
@@ -180,7 +186,6 @@ box-shadow: 13px 22px 18px 0px rgba(0,0,0,0.75);
 }
 .price{
     width: 100%;
-    display: flex;
     margin: 10px 0;
 }
 .sale{
@@ -203,7 +208,7 @@ footer{
 }
 .section-footer i{
     color: var(--celeste);
-    font-size: 32px;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 .footer-brand p{
@@ -234,9 +239,11 @@ footer{
     transform: rotate(-90deg) ;
 }
 
-.form-titule{
+.form-title{
     text-align: center;
     font-size: 48px;
+    margin: 0 0 23px 0;
+    
 }
 main form{
     display: flex;
@@ -254,7 +261,7 @@ main form label{
 .input-style{
     height: 32px;
     margin: 5px 0;
-    border: solid 1px var(--gris-oscuro);
+    border: none;
     border-radius: 5px;
 }
 .upload-style{
@@ -269,18 +276,18 @@ main form label{
     letter-spacing: 1px;
 }
 .btn-submit{
-    background-color: var(--amarillo);
+    background-color: var(--celeste);
     color: white;
-    margin: 15px 0 8px 0;
+    margin: 32px 0 8px 0;
 }
 input.btn-submit:hover{
     background-color: white;
-    color: var(--amarillo);
+    color: var(--celeste);
     border: 1px solid var(--gris-claro);
     
 }
 .btn-reset{
-    background-color: var(--celeste);
+    background-color: var(--gris-oscuro);
     color: white;
 }
 input.btn-reset:hover{
@@ -292,7 +299,21 @@ input.btn-reset:hover{
     margin: 8px 0 0 0;
 }
 
-@media (min-width: 768px) {
+/* Navegación en tablet*/
+@media (min-width: 361px) {
+    .product{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    .product-name, .price{
+        display: flex;
+    }
+    
+    .product{
+        max-width: 46%;
+    }
+}
+/* Navegación en desktop*/
+@media (min-width: 769px) {
 
     .logo{
         width: 150px;
@@ -321,9 +342,19 @@ input.btn-reset:hover{
         max-width: 350px;
         text-align: right;
     }
-    .product{
-        max-width: 47%;
+    /*Product*/
+    .price{
+        display: flex;
     }
+    .sale{
+        width: 30%;
+        background-color: #39b54a;
+    }
+    .discount{
+        width: 70%;
+        background-color: #eac926;
+    }
+    
     /*Register*/
     .form-titule{
         font-size: 56px;
@@ -373,7 +404,7 @@ input.btn-reset:hover{
         max-width: 20%;
     }
     .sale{
-        font-size: 2;
+        font-size: 2em;
     }
     main form{
         max-width: 620px;
