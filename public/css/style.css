@@ -5,15 +5,14 @@
     --gris-oscuro: #666;
     --gris-claro: #ebebeb;
     --verde: #39b54a;
-    --negro-mate: #333;
+    --negro-mate: #333; 
+    --action-btn: #0022AA;
 }
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 /*
 Cuerpos de texto: 12px
 Titulares (Basado en tu última visita/Ofertas): 24px
@@ -21,8 +20,6 @@ Precios: 18px
 Descuentos: 16px
 Descripciones: 16px
 */
-
-
 html{
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
@@ -38,7 +35,6 @@ html{
 .descunto-o-descripcion{
     font-size: 16px;
 }
-
 .mini-header{
    align-items: center;
    display: flex;
@@ -47,33 +43,34 @@ html{
    width: 100%;
 }
 .page-body{
-    background-color: var(--gris-claro);
+    width: 90%;
+    margin: auto;
     padding: 50px 0;
 }
 main{
-    width: 90%;
+    background-color: var(--gris-claro);
+    
 }
-
 /*Navbar*/
 .bar-menu{
     background-color: var(--amarillo);
     padding: 20px;
     width: 100%;
 }
-
+.mini-header img, .burger-menu input, .mini-header{
+    margin-bottom: 20px;
+}
 /*Logo*/
 .logo{
-    width: 50%;
-    max-width: 150px;
+    width: 45%; 
     margin-left: 10px;
 }
 
 .payment-method{
-    font-size: 18px;
+    font-size: 15px;
     text-align: center;
     width: 100%;
 }
-
 /*menu-button*/
 .burger-menu{
     text-align: center;
@@ -87,14 +84,12 @@ main{
     border: none;
     border-radius: 8px;
 }
-
 /*menu*/
 .navbar ul{
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
 .navbar a{
     text-decoration: none;
     color: var(--gris-oscuro);
@@ -105,14 +100,15 @@ main{
 .navbar{
     display: none;
 }
-
 /*Search*/
 .search-section{
     position: relative;
     display: inline-block;
+    width: 46%;
 }
 .search-input{
     height: 32px;
+    width: 100%;
     border: none;
     border-radius: 5px;
     padding: 5px;
@@ -136,16 +132,16 @@ main{
     color: var(--amarillo);
 }
 /*banner*/
+.banner{
+    background-color: var(--gris-claro);
+}
 .banner img{
     width: 100%;
 }
 /*Productos*/
-main{
-    margin: auto;
-}
+
 main h2{
-    padding: 32px;
-    text-align: center;
+    padding: 25px 0;
 }
 .section-product{
     background-color: white;
@@ -159,6 +155,7 @@ main h2{
 .product{
     width: 100%;
     margin: 5px;
+    background-color: white;
 }
 .detail-product{
     border-top: 1px solid var(--gris-claro);
@@ -187,15 +184,17 @@ box-shadow: 13px 22px 18px 0px rgba(0,0,0,0.75);
 .price{
     width: 100%;
     margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
 }
 .sale{
-    font-size: 26px;
+    font-size: 18px;
     width: 30%;
     font-weight: 700;
 }
 .discount{
     width: 70%;
-    font-size: 22px;
+    font-size: 18px;
     color: var(--verde);
 }
 footer{
@@ -211,10 +210,12 @@ footer{
     font-size: 2rem;
     margin-bottom: 10px;
 }
+.section-footer i:hover{
+    color: var(--action-btn)
+}
 .footer-brand p{
     font-size: 10px;
 }
-
 /*Delivery icon*/
 .detail-product{
     position: relative;
@@ -234,16 +235,13 @@ footer{
     right: 20px;
     top: -20px;
 }
-
 .product-delivery-icon:hover{
     transform: rotate(-90deg) ;
 }
-
 .form-title{
     text-align: center;
     font-size: 48px;
-    margin: 0 0 23px 0;
-    
+    margin: 0 0 23px 0;   
 }
 main form{
     display: flex;
@@ -256,7 +254,6 @@ main form label{
     color: var(--negro-mate);
     margin-top: 15px;
     font-weight: 700;
-
 }
 .input-style{
     height: 32px;
@@ -281,10 +278,9 @@ main form label{
     margin: 32px 0 8px 0;
 }
 input.btn-submit:hover{
-    background-color: white;
-    color: var(--celeste);
-    border: 1px solid var(--gris-claro);
-    
+    background-color: var(--action-btn);
+    color: white;
+    border: 1px solid var(--gris-claro);    
 }
 .btn-reset{
     background-color: var(--gris-oscuro);
@@ -301,39 +297,47 @@ input.btn-reset:hover{
 
 /* Navegación en tablet*/
 @media (min-width: 361px) {
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar ul{
+        display: flex;
+    }
+    .burger-menu{
+        display: none;
+    }
     .product{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .product-name, .price{
         display: flex;
+        justify-content: space-between;
     }
-    
     .product{
         max-width: 46%;
+    }
+    .sale{
+        width: 30%;
+        font-size: 16px;
+    }
+    .discount{
+        width: 70%;
+        font-size: 16px;
+        text-align: center;
+    }
+    .logo, .search-section,.payment-method {
+        width: 30%; 
     }
 }
 /* Navegación en desktop*/
 @media (min-width: 769px) {
-
-    .logo{
-        width: 150px;
-    }
     .mini-header{
         display: flex;
         justify-content: space-between;
     }
-    .burger-menu{
-        display: none;
-    }
-    .navbar{
-        /*border: dotted 2px red;*/
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .navbar ul{
-        display: flex;
-    }
+    
     .navbar li{
         margin: 0 5px;
     }
@@ -343,18 +347,18 @@ input.btn-reset:hover{
         text-align: right;
     }
     /*Product*/
+    .product{
+        max-width: 20%;
+    }
     .price{
         display: flex;
     }
     .sale{
         width: 30%;
-        background-color: #39b54a;
     }
     .discount{
-        width: 70%;
-        background-color: #eac926;
-    }
-    
+        width: 70%;        
+    }    
     /*Register*/
     .form-titule{
         font-size: 56px;
@@ -377,36 +381,9 @@ input.btn-reset:hover{
     .upload-style{
         margin: 5px 0;
     }
-    footer{
+    .conteiner-footer{
         display: flex;
-    }
-}
-
-@media (min-width:1200px){
-    .search-input {
-        width: 610px;
-    }
-    .mini-header, .navbar{
         max-width: 1200px;
         margin: auto;
-        padding-bottom: 15px;
-    }
-    .payment-method{
-        font-size: 19px;
-    }
-    .logo{
-        width: 250px;
-    }
-    .navbar a{
-        font-size: 18px;
-    }
-    .product{
-        max-width: 20%;
-    }
-    .sale{
-        font-size: 2em;
-    }
-    main form{
-        max-width: 620px;
     }
 }
