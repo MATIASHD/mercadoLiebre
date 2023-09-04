@@ -168,7 +168,7 @@ main h2{
 }
 .product-name{
     margin: 5px 0;
-    display: none;
+    /*display: none;*/
 }
 /*.detail-product:hover .product-name{
     display: block;
@@ -212,6 +212,13 @@ footer{
 }
 .section-footer i:hover{
     color: var(--action-btn)
+}
+div.product-name p{
+    display: none;
+}
+.one div:hover p, .two div:hover p, .three div:hover p, .four div:hover p,
+.five div:hover p, .six div:hover p, .seven div:hover p, .eight div:hover p{
+    display: flex;
 }
 .footer-brand p{
     font-size: 10px;
@@ -294,7 +301,6 @@ input.btn-reset:hover{
 .radio-option{
     margin: 8px 0 0 0;
 }
-
 /* Navegación en tablet*/
 @media (min-width: 361px) {
     .navbar{
