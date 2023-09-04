@@ -2,9 +2,11 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
+//variable de entorno
+const PORT = process.env.PORT || 3001
 
 //Server
-app.listen(3000, () => console.log("Server arriba"));
+app.listen(PORT, () => console.log(`Servidor arriba y en el puerto ${PORT}`));
 
 //Resource
 app.use(express.static(path.resolve(__dirname,'./public')));
